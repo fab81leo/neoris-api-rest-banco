@@ -3,9 +3,6 @@
 Autor: Fabian Torres
 <br>
 
-Este proyecto fue desarrollado con el IDE de Spring Tool Suite 4, utilizando las siguientes tecnologías:
-
-
 ## Funcionalidad
 
 Este proyecto se encarga de realizar diferentes transacciones (débito y crédito), sobre las diferentes 
@@ -15,6 +12,8 @@ cuando se intenta retirar más de un monto permitido, entre otras validaciones.
 
 La aplicación permite registrar un control de todos los movimientos que se han efectuado (débito y crédito). 
 Para posteriormente realizar fitros de búsqueda por fecha e identificador del cliente. 
+
+Este proyecto fue desarrollado con el IDE de Spring Tool Suite 4, utilizando las siguientes tecnologías:
 
 <br>
 
