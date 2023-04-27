@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "c69feee2-6109-40c9-a685-d00af0c4f908",
+		"name": "BANCO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14151043"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Lista de Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/clientes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contrasena\": \"9999\",\r\n    \"estado\": \"False\",\r\n    \"persona\": {\r\n        \"id\": 2,\r\n        \"nombre\": \"Fabian Torres\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 41,\r\n        \"identificacion\": \"80088618\",\r\n        \"direccion\": \"Bogota\",\r\n        \"telefono\": \"3195904891\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8033/banco/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contrasena\": \"8881\",\r\n    \"estado\": \"True\",\r\n    \"persona\": {\r\n        \"id\": 3,\r\n        \"nombre\": \"Fabian Torres\",\r\n        \"genero\": \"M\",\r\n        \"edad\": 41,\r\n        \"identificacion\": \"80088618\",\r\n        \"direccion\": \"Bogota\",\r\n        \"telefono\": \"3195904891\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8033/banco/api/clientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/clientes/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Lista de Cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cuenta por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/cuentas/31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"cuentas",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nueva Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"585545\",\r\n    \"tipo\": \"Corriente\",\r\n    \"saldoInicial\": 1000.0,\r\n    \"estado\": \"True\",\r\n    \"cliente\": {\r\n        \"id\": 1,\r\n        \"contrasena\": \"1234\",\r\n        \"estado\": \"True\",\r\n        \"persona\": {\r\n            \"id\": 1            \r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8033/banco/api/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Cuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"999786534\",\r\n    \"tipo\": \"Ahorros\",\r\n    \"saldoInicial\": 750000.0,\r\n    \"estado\": \"True\",\r\n    \"cliente\": {\r\n        \"id\": 2,\r\n        \"contrasena\": \"5678\",\r\n        \"estado\": \"True\",\r\n        \"persona\": {\r\n            \"id\": 2,\r\n            \"nombre\": \"Marianela Montalvo\",\r\n            \"genero\": \"F\",\r\n            \"edad\": 27,\r\n            \"identificacion\": \"1032356782\",\r\n            \"direccion\": \"Amazonas y NNUU\",\r\n            \"telefono\": \"097548965\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8033/banco/api/cuentas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"cuentas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Cuenta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/cuentas/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"cuentas",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Lista de Movimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movimiento por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/movimientos/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"movimientos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"valor\":16000.0,\r\n    \"cuenta\": {\r\n        \"id\": 2,\r\n        \"numeroCuenta\": 225487,\r\n        \"tipo\": \"Corriente\",\r\n        \"saldoInicial\": 100.0,\r\n        \"estado\": \"True\",\r\n        \"cliente\": {\r\n            \"id\": 2,\r\n            \"contrasena\": \"5678\",\r\n            \"estado\": \"True\",\r\n            \"persona\": {\r\n                \"id\": 2,\r\n                \"nombre\": \"Marianela Montalvo\",\r\n                \"genero\": \"F\",\r\n                \"edad\": 27,\r\n                \"identificacion\": \"1032356782\",\r\n                \"direccion\": \"Amazonas y NNUU\",\r\n                \"telefono\": \"097548965\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8033/banco/api/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Movimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"valor\":10,\r\n    \"cuenta\": {\r\n        \"id\": 2,\r\n        \"numeroCuenta\": 225487,\r\n        \"tipo\": \"Corriente\",\r\n        \"saldoInicial\": 100.0,\r\n        \"estado\": \"True\",\r\n        \"cliente\": {\r\n            \"id\": 2,\r\n            \"contrasena\": \"5678\",\r\n            \"estado\": \"True\",\r\n            \"persona\": {\r\n                \"id\": 2,\r\n                \"nombre\": \"Marianela Montalvo\",\r\n                \"genero\": \"F\",\r\n                \"edad\": 27,\r\n                \"identificacion\": \"1032356782\",\r\n                \"direccion\": \"Amazonas y NNUU\",\r\n                \"telefono\": \"097548965\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8033/banco/api/movimientos/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"movimientos",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Movimiento",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/movimientos/3333",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"movimientos",
+								"3333"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Lista de Reportes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/reportes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"reportes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda por Fecha y Cliente Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8033/banco/api/reportes/2022-02-10/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8033",
+							"path": [
+								"banco",
+								"api",
+								"reportes",
+								"2022-02-10",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
