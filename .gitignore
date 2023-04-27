@@ -1,3 +1,5 @@
+### .gitignore for Java, Maven, Spring Boot - Eclipse, Netbeans, IntelliJ IDEA, Visual Studio Code
+
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
